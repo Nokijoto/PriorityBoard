@@ -60,10 +60,10 @@ class TaskService
             $task->importance = $taskData['importance'];
             $task->urgency = $taskData['urgency'];
             $task->updated_at = Carbon::now();
-            dd($task);
             $task->save();
             return true;
         } catch (\Exception $e) {
+            Log::info($e);
             Log::error($e);
             return false;
         }

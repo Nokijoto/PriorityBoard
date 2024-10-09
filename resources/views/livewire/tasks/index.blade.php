@@ -9,9 +9,9 @@
         </a>
     </div>
 
-    <div class="flex space-x-6">
+    <div class="flex gap-4">
         <!-- Kolumna "Do zrobienia" -->
-        <div class="kanban-column w-1/3 p-4 bg-gradient-to-b from-blue-100 to-blue-50 rounded-xl shadow-lg">
+        <div class="kanban-column flex-grow p-4 bg-gradient-to-b from-blue-100 to-blue-50 rounded-xl shadow-lg">
             <h3 class="text-2xl font-semibold mb-4 text-blue-600">Do zrobienia</h3>
             @if($tasks['todo'] == [])
                 <p class="text-gray-500 italic">Brak zadań do zrobienia</p>
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Kolumna "W toku" -->
-        <div class="kanban-column w-1/3 p-4 bg-gradient-to-b from-yellow-100 to-yellow-50 rounded-xl shadow-lg">
+        <div class="kanban-column flex-grow p-4 bg-gradient-to-b from-yellow-100 to-yellow-50 rounded-xl shadow-lg">
             <h3 class="text-2xl font-semibold mb-4 text-yellow-600">W toku</h3>
             @if($tasks['in_progress'] == [])
                 <p class="text-gray-500 italic">Brak zadań w toku</p>
@@ -47,7 +47,7 @@
         </div>
 
         <!-- Kolumna "Zakończone" -->
-        <div class="kanban-column w-1/3 p-4 bg-gradient-to-b from-green-100 to-green-50 rounded-xl shadow-lg">
+        <div class="kanban-column flex-grow p-4 bg-gradient-to-b from-green-100 to-green-50 rounded-xl shadow-lg">
             <h3 class="text-2xl font-semibold mb-4 text-green-600">Zakończone</h3>
             @if($tasks['done'] == [])
                 <p class="text-gray-500 italic">Brak zakończonych zadań</p>

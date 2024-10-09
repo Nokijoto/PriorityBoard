@@ -71,16 +71,15 @@ class TaskController extends Controller
             'urgency' => 'required|boolean',
         ]);
 
-        $task = $this->taskService->getTask($taskId);
+//        $task = $this->taskService->getTask($taskId);
         $this->taskService->updateTask([
             'id' => $taskId,
             'name' => $request->name,
-            'completed' => $request->completed,
+            'description'=>$request->description,
+            'status'=>$request->status,
             'importance' => $request->importance,
             'urgency' => $request->urgency,
         ]);
-        dd($task);
-        $task->save();
 
         return redirect()->route('tasks');
     }
