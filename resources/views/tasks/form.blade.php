@@ -54,7 +54,7 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-4 mx-auto">
                                 <label class="block text-gray-700 text-lg font-semibold mb-2">Priorytet zadania (Macierz Eisenhowera):</label>
                                 <div class="grid grid-cols-2 gap-4">
                                     <div>

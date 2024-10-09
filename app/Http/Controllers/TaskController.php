@@ -81,7 +81,7 @@ class TaskController extends Controller
             'urgency' => $request->urgency,
         ]);
 
-        return redirect()->route('tasks');
+        return redirect()->back()->with('success', 'Zadanie zostało zaktualizowane pomyślnie.');
     }
     public function edit(Request $request, $taskId)
     {
